@@ -1,0 +1,1538 @@
+:root {
+  /* ----------COLORS---------- */
+  --bg: #f9f9f9;
+  --pri-clr: #000000;
+  --sec-clr: #e14f4f;
+  --pri-light-clr: #756f6f;
+
+  /* ----------FONTS---------- */
+  --inter: "Inter", sans-serif;
+  --chillax: "Chillax", sans-serif;
+  --chicle: "Chicle", serif;
+}
+
+/* Dark mode colors */
+.dark-mode {
+  --bg: #121212;
+  --pri-clr: #f2f2f2;
+  --sec-clr: #e14f4f;
+  --pri-light-clr: #7f7f7f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  font-family: var(--chillax);
+  background: var(--bg);
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--pri-clr);
+}
+
+.head-h1 h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+            MAIN PAGE START
+- - - - - - - - - -  - - - - - - - - - - */
+
+nav {
+  padding: 30px 0;
+  width: 100%;
+  /* height: 100vh; */
+  font-weight: 400;
+  /* display: flex;
+  justify-content: space-between; */
+  position: relative;
+  font-size: 20px;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+#nav a {
+  position: relative;
+}
+
+#nav a::after {
+  transition: 0.3s;
+  content: " ";
+  position: absolute;
+  height: 1.5px;
+  width: 0;
+  background: var(--pri-clr);
+  bottom: -5px;
+  left: 50%;
+}
+
+#nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.menu ul li:first-child {
+  margin-left: 0;
+}
+
+a.active,
+a:hover {
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+}
+
+#dark-btn {
+  background: url(../images/dark.png);
+  /* height: 100%; */
+  /* width: 100%; */
+  /* display: block; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.fa-solid {
+  color: var(--pri-clr);
+}
+/* * * * * * * * * * *
+    INTRO PART START
+* * * * * * * * * * */
+
+#intro {
+  margin-top: 130px;
+  padding: 0 200px;
+  text-align: center;
+}
+
+#intro h1 {
+  margin-bottom: 12px;
+}
+
+#intro p {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#intro p span a {
+  color: var(--sec-clr);
+}
+
+/* * * * * * * * * * *
+    INTRO PART END
+* * * * * * * * * * */
+
+/* * * * * * * * * * *
+    PROJECT PART START
+* * * * * * * * * * */
+#project {
+  margin: 120px 0;
+}
+
+.project-header p {
+  margin: 24px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.project-tab {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 710px;
+  height: 694px;
+  margin-bottom: 20px;
+}
+
+.project-card:nth-child(even) {
+  margin-left: 20px;
+}
+
+.project-prev {
+  border-radius: 8px;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  /* background: url(../../../public/images/lyfcap-border.png); */
+}
+
+.project-prev a {
+  display: block;
+  transition: 0.7s;
+  width: 100%;
+  height: 100%;
+  background: url(../images/lyfcap-border.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.project-prev a img {
+  width: 100%;
+}
+
+.momument a {
+  background: url(../images/the-momument-border.png);
+}
+.lyfcap a {
+  background: url(../images/lyfcap-border.png);
+}
+.grower a {
+  background: url(../images/grower-border.png);
+}
+.adventies a {
+  background: url(../images/adventies.co-border.png);
+}
+
+.project-prev:hover a,
+.project-prev:focus a {
+  transform: scale(1.085);
+}
+
+.project-prev img {
+  display: block;
+  margin: auto;
+  transition: 0.7s;
+}
+
+.project-det {
+  margin-top: 20px;
+}
+
+.project-det h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.project-tags {
+  text-transform: uppercase;
+  color: var(--pri-light-clr);
+  font-size: 20px;
+}
+
+.project-desc {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 8px !important;
+}
+
+.project-det h2,
+.project-det p {
+  margin: 0px;
+}
+/* * * * * * * * * * *
+    PROJECT PART END
+* * * * * * * * * * */
+
+/* * * * * * * * * * *
+    SHORT CONTACT PART START
+* * * * * * * * * * */
+#cont-short {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#cont-short h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 48px;
+}
+#cont-short h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 40px;
+}
+#cont-short p {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+/* * * * * * * * * * *
+    SHORT CONTACT PART END
+* * * * * * * * * * */
+
+/* * * * * * * * * * *
+    FOOTER PART START
+* * * * * * * * * * */
+#footer {
+  margin: 40px 0;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: var(--inter);
+  text-transform: capitalize;
+}
+
+#footer ul li a {
+  position: relative;
+}
+
+#footer ul li a::after {
+  transition: 0.3s;
+  content: " ";
+  position: absolute;
+  height: 1.5px;
+  width: 0;
+  background: var(--pri-clr);
+  bottom: -5px;
+  left: 50%;
+}
+
+#footer ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* * * * * * * * * * *
+    FOOTER PART END
+* * * * * * * * * * */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            MAIN PAGE END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            WORK PAGE START
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* * * * * * * * * * *
+    WORK PART START
+* * * * * * * * * * */
+
+#work {
+  font-family: var(--chillax);
+  margin-bottom: 80px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
+
+.work-image {
+  border-radius: 8px;
+  width: 832px;
+  height: 1923px;
+  background: url(../images/work-prev-img+bg-momument.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.work-details {
+  width: 588px;
+  margin-top: 20px;
+  /* display: inline-block; */
+}
+
+.work-details h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.work-details .work-tags {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--pri-light-clr);
+  text-transform: uppercase;
+}
+
+.work-details .work-about {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.work-details h3,
+.work-para-768 h3 {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 22px 0 12px;
+}
+
+.work-details p {
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 12px;
+}
+
+.work-para {
+  margin-top: 20px;
+  border-top: 1px dashed var(--pri-light-clr);
+}
+
+.work-para p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.work-para-768 {
+  display: none;
+}
+
+/* * * * * * * * * * *
+    WORK PART END
+* * * * * * * * * * */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            WORK PAGE END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            ABOUT PAGE START
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* * * * * * * * * * *
+    ABOUT PART START
+* * * * * * * * * * */
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.about-image {
+  width: 588px;
+  height: 600px;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-text {
+  width: 814px;
+}
+
+.about-text p {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 1.8rem 0;
+  /* line-height: 1.5; */
+}
+
+.about-text p span {
+  color: var(--sec-clr) !important;
+}
+
+.about-text p a span {
+  text-decoration: underline;
+}
+
+/* * * * * * * * * * *
+    ABOUT PART END
+* * * * * * * * * * */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            ABOUT PAGE END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            CONTACT PAGE START
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* * * * * * * * * * *
+    CONTACT PART START
+* * * * * * * * * * */
+
+#contact {
+  margin-top: 30px;
+}
+
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form {
+  width: 710px;
+  margin-top: 20px;
+}
+
+.contact-form label {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--pri-clr);
+}
+.contact-form textarea {
+  height: 228px !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  resize: none;
+  display: block;
+  background: #d9d9d9;
+  height: 48px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--chillax);
+  letter-spacing: 0px;
+}
+
+.cont-form-names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-name {
+  width: 345px;
+}
+
+.form-name input::spelling-error,
+.cont-form-email input::spelling-error {
+  text-decoration: none;
+}
+
+.contact-form input:focus,
+.contact-form input:active,
+.contact-form textarea:focus,
+.contact-form textarea:active {
+  outline: none;
+}
+
+.cont-form-btn {
+  background: var(--sec-clr);
+  color: #f8fafc;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 24px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contact-address {
+  width: 660px;
+  padding: 70px 12px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.cont-address-parts {
+  margin: 22px 0;
+}
+
+.cont-address-parts p {
+  margin: 4px 0;
+}
+/* * * * * * * * * * *
+    CONTACT PART END
+* * * * * * * * * * */
+
+/* - - - - - - - - - - - - - - - - - - - -
+            CONTACT PAGE END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN FROM 320PX TO 430PX START
+- - - - - - - - - -  - - - - - - - - - - */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* .container {
+    width: 300px;
+  } */
+
+  /* * * * * * * * * * *
+MAIN PAGE NAVBAR PART START
+* * * * * * * * * * */
+  .hamburger {
+    display: block;
+    font-style: 18px;
+    z-index: 1;
+  }
+
+  .container {
+    width: 90%;
+    /* max-width: 620px; */
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  #menuUl {
+    height: 100vh;
+    transition: all 0.5s;
+    background: var(--bg);
+  }
+  .menu {
+    font-size: 32px;
+  }
+
+  .menu ul {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 0;
+  }
+
+  .menu-lis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .menu ul li {
+    display: block;
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE NAVBAR PART END
+* * * * * * * * * * */
+
+  #intro {
+    padding: 0;
+  }
+
+  #intro h1 {
+    font-size: 32px;
+  }
+
+  #intro p {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+
+  #intro {
+    margin-top: 20px;
+  }
+
+  #project {
+    margin: 60px 0 20px;
+  }
+
+  .project-det h2 {
+    font-size: 32px;
+  }
+
+  .project-tags {
+    font-size: 16px;
+  }
+
+  .project-desc {
+    font-size: 18px;
+  }
+
+  .project-card {
+    width: 100%;
+    /* height: 420px; */
+    height: auto;
+  }
+
+  .project-card:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  #cont-short h2 {
+    font-size: 32px;
+  }
+
+  #cont-short h3 {
+    font-size: 26px;
+  }
+
+  #cont-short p {
+    font-size: 18px;
+  }
+
+  #cont-short {
+    margin-bottom: 50px;
+  }
+
+  #footer ul {
+    column-gap: 16px;
+    font-size: 16px;
+  }
+
+  .project-header p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .project-prev {
+    width: 100%;
+    /* position: relative; */
+    /* height: 212px; */
+    height: calc(90vw * 53 / 72);
+  }
+
+  .project-prev:hover a,
+  .project-prev:focus a {
+    transform: scale(1.09);
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN FROM 320PX TO 430PX END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN UPTO 768PX START
+- - - - - - - - - -  - - - - - - - - - - */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* * * * * * * * * * *
+MAIN PAGE NAVBAR PART START
+* * * * * * * * * * */
+  .hamburger {
+    display: block;
+    font-style: 18px;
+    z-index: 1;
+  }
+
+  .container {
+    width: 90%;
+    /* max-width: 620px; */
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  #menuUl {
+    height: 100vh;
+    transition: all 0.5s;
+    background: var(--bg);
+  }
+  .menu {
+    font-size: 32px;
+  }
+
+  .menu ul {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 0;
+  }
+
+  .menu-lis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .menu ul li {
+    display: block;
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE NAVBAR PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART START
+* * * * * * * * * * */
+  #intro {
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  #intro h1 {
+    font-size: 34px;
+  }
+
+  #intro p {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART START
+* * * * * * * * * * */
+
+  #project {
+    margin: 80px 0;
+  }
+  /* 
+  .project-header p {
+    font-size: 16px;
+  } */
+  /* 
+  .project-card {
+    width: 100%;
+    height: auto;
+    margin-left: 0 !important;
+  } */
+  /* 
+  .project-prev {
+    width: 370px;
+    height: 270px;
+  } */
+
+  .project-det h2 {
+    font-size: 34px;
+  }
+
+  .project-tags {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 18px;
+  }
+
+  .project-card {
+    width: 100%;
+    /* height: 420px; */
+    height: auto;
+  }
+
+  .project-card:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .project-header p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .project-prev {
+    width: 100%;
+    /* position: relative; */
+    /* height: 212px; */
+    height: calc(90vw * 53 / 72);
+  }
+
+  .project-prev:hover a,
+  .project-prev:focus a {
+    transform: scale(1.09);
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE SHORT CONTACT PART START
+* * * * * * * * * * */
+
+  #cont-short h2 {
+    font-size: 40px;
+  }
+
+  #cont-short h3 {
+    font-size: 36px;
+  }
+
+  #cont-short p {
+    font-size: 24px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE SHORT CONTACT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE FOOTER PART START
+* * * * * * * * * * */
+
+  #footer ul {
+    font-size: 18px;
+    column-gap: 32px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE FOOTER PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART START
+* * * * * * * * * * */
+
+  #work {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .work-details h1 {
+    font-size: 38px;
+  }
+
+  .work-details .work-tags {
+    font-size: 16px;
+  }
+
+  .work-details .work-about {
+    font-size: 20px;
+  }
+
+  .work-para-768 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .work-details h3,
+  .work-para-768 h3 {
+    font-size: 32px;
+  }
+
+  .work-details p {
+    font-size: 18px;
+  }
+
+  .work-details {
+    order: 1;
+  }
+
+  .work-image {
+    order: 2;
+    width: 378px;
+    height: 880px;
+    background: url(../images/768-work-prev-img+bg-momument.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 16px 0;
+  }
+
+  .work-para {
+    display: none;
+  }
+
+  .work-para-768 {
+    display: block;
+    order: 3;
+  }
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART START
+* * * * * * * * * * */
+
+  .head-h1 h1 {
+    font-size: 38px;
+  }
+
+  .contact-main {
+    flex-direction: column;
+  }
+
+  .form-name {
+    width: 45%;
+  }
+
+  .contact-form,
+  .contact-address {
+    width: 100%;
+  }
+
+  /* * * * * * * * * * *
+    CONTACT PAGE CONTACT PART END
+    * * * * * * * * * * */
+
+  /* * * * * * * * * * *
+    ABOUT PAGE ABOUT PART START
+    * * * * * * * * * * */
+  #about {
+    flex-direction: column;
+    margin-top: 20px;
+    /* justify-content: center; */
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+  }
+
+  #about .head-h1 h1 {
+    font-size: 32px;
+  }
+
+  .about-text p {
+    font-size: 20px;
+    text-align: justify;
+  }
+  /* * * * * * * * * * *
+    ABOUT PAGE ABOUT PART END
+    * * * * * * * * * * */
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN UPTO 768PX END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 769PX TO 992PX START
+- - - - - - - - - -  - - - - - - - - - - */
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .container {
+    width: 650px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART START
+* * * * * * * * * * */
+  #intro {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .head-h1 h1 {
+    font-size: 38px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART START
+* * * * * * * * * * */
+
+  .project-tab {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    margin-left: 0 !important;
+  }
+
+  .project-prev {
+    width: 100%;
+    height: 484px;
+  }
+
+  .project-prev a {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .project-prev:hover a,
+  .project-prev:focus a {
+    transform: scale(1.1);
+  }
+
+  .momument a {
+    background: url(../images/768-the-momument-border.png);
+  }
+  .lyfcap a {
+    background: url(../images/lyfcap-border.png);
+  }
+  .grower a {
+    background: url(../images/grower-border.png);
+  }
+  .adventies a {
+    background: url(../images/adventies.co-border.png);
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART START
+* * * * * * * * * * */
+
+  #work {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .work-details h1 {
+    font-size: 38px;
+  }
+
+  .work-details .work-tags {
+    font-size: 16px;
+  }
+
+  .work-details .work-about {
+    font-size: 20px;
+  }
+
+  .work-para-768 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .work-details h3,
+  .work-para-768 h3 {
+    font-size: 32px;
+  }
+
+  .work-details p {
+    font-size: 18px;
+  }
+
+  .work-details {
+    order: 1;
+  }
+  .work-image {
+    order: 2;
+    width: 603px;
+    height: 1422px;
+    margin: 16px 0;
+  }
+
+  .work-para {
+    display: none;
+  }
+
+  .work-para-768 {
+    display: block;
+    order: 3;
+  }
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART START
+* * * * * * * * * * */
+
+  .contact-main {
+    flex-direction: column;
+  }
+
+  .form-name {
+    width: 45%;
+  }
+
+  .contact-form,
+  .contact-address {
+    width: 80%;
+    margin: 20px auto 0;
+  }
+
+  .menu ul li {
+    margin-left: 50px;
+  }
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+    ABOUT PAGE ABOUT PART START
+    * * * * * * * * * * */
+
+  #about {
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 588px;
+  }
+
+  .about-image,
+  .about-text {
+    margin: 16px 0;
+  }
+
+  .about-text p {
+    font-size: 22px;
+    text-align: justify;
+  }
+
+  /* * * * * * * * * * *
+    ABOUT PAGE ABOUT PART END
+    * * * * * * * * * * */
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 769PX TO 992PX END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 993PX TO 1200PX START
+- - - - - - - - - -  - - - - - - - - - - */
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    width: 880px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART START
+* * * * * * * * * * */
+  #intro {
+    padding: 0;
+    margin-top: 70px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE INTRO PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART START
+* * * * * * * * * * */
+
+  .project-tab {
+    justify-content: space-evenly;
+  }
+
+  .project-card {
+    width: 428px;
+    height: 522px;
+    margin-bottom: 40px !important;
+  }
+
+  .project-prev {
+    height: 312px;
+  }
+
+  .project-prev a {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .momument a {
+    background: url(../images/768-the-momument-border.png);
+  }
+  .lyfcap a {
+    background: url(../images/lyfcap-border.png);
+  }
+  .grower a {
+    background: url(../images/grower-border.png);
+  }
+  .adventies a {
+    background: url(../images/adventies.co-border.png);
+  }
+
+  .project-det h2 {
+    font-size: 36px;
+  }
+
+  .project-tags {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 20px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART START
+* * * * * * * * * * */
+
+  #work {
+    flex-wrap: wrap;
+  }
+
+  .work-details h1 {
+    font-size: 38px;
+  }
+
+  .work-details .work-tags {
+    font-size: 16px;
+  }
+
+  .work-details .work-about {
+    font-size: 20px;
+  }
+
+  .work-para-768 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .work-details h3,
+  .work-para-768 h3 {
+    font-size: 32px;
+  }
+
+  .work-details p {
+    font-size: 18px;
+  }
+
+  .work-details {
+    /* width: 360px; */
+    /* width: calc(calc(100vw)-calc(530px)); */
+    width: 41%;
+    margin-top: 32px;
+  }
+  .work-image {
+    width: 500px;
+    height: 1180px;
+    margin: 16px 0;
+  }
+
+  .work-para {
+    display: block;
+  }
+
+  .work-para-768 {
+    display: none;
+  }
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART START
+* * * * * * * * * * */
+
+  .contact-form,
+  .contact-address {
+    width: 48%;
+  }
+
+  .form-name {
+    width: 45%;
+  }
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+ABOUT PAGE ABOUT PART START
+* * * * * * * * * * */
+
+  #about {
+    flex-direction: column;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+  .about-image,
+  .about-text {
+    width: 588px;
+    margin: 16px 0;
+  }
+
+  /* * * * * * * * * * *
+ABOUT PAGE ABOUT PART END
+* * * * * * * * * * */
+
+  #footer ul {
+    column-gap: 80px;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 993PX TO 1200PX END
+- - - - - - - - - -  - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 1201PX TO 1400PX START
+- - - - - - - - - -  - - - - - - - - - - */
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .container {
+    width: 1140px;
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART START
+* * * * * * * * * * */
+
+  .project-card {
+    width: 560px;
+    height: auto;
+  }
+
+  .project-prev {
+    height: 413px;
+  }
+
+  .project-prev:hover a,
+  .project-prev:focus a {
+    transform: scale(1.095);
+  }
+
+  .project-prev a {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+
+  .momument a {
+    background: url(../images/the-momument-border.png);
+  }
+  .lyfcap a {
+    background: url(../images/lyfcap-border.png);
+  }
+  .grower a {
+    background: url(../images/grower-border.png);
+  }
+  .adventies a {
+    background: url(../images/adventies.co-border.png);
+  }
+
+  /* * * * * * * * * * *
+MAIN PAGE PROJECT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART START
+* * * * * * * * * * */
+
+  #work {
+    flex-wrap: wrap;
+  }
+
+  .work-details h1 {
+    font-size: 38px;
+  }
+
+  .work-details .work-tags {
+    font-size: 16px;
+  }
+
+  .work-details .work-about {
+    font-size: 20px;
+  }
+
+  .work-para-768 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .work-details h3,
+  .work-para-768 h3 {
+    font-size: 32px;
+  }
+
+  .work-details p {
+    font-size: 18px;
+  }
+
+  .work-details {
+    /* width: 360px; */
+    /* width: calc(calc(100vw)-calc(530px)); */
+    width: 45%;
+    margin-top: 32px;
+  }
+  .work-image {
+    width: 600px;
+    height: 1412px;
+    margin: 16px 0;
+  }
+
+  .work-para {
+    display: block;
+  }
+
+  .work-para-768 {
+    display: none;
+  }
+
+  /* * * * * * * * * * *
+WORK PAGE WORK PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART START
+* * * * * * * * * * */
+
+  .contact-form {
+    width: 640px;
+  }
+
+  .contact-address {
+    width: 460px;
+  }
+
+  .form-name {
+    width: 300px;
+  }
+
+  /* * * * * * * * * * *
+CONTACT PAGE CONTACT PART END
+* * * * * * * * * * */
+
+  /* * * * * * * * * * *
+ABOUT PAGE ABOUT PART START
+* * * * * * * * * * */
+  .about-text {
+    text-align: justify;
+    width: 514px;
+  }
+
+  /* * * * * * * * * * *
+ABOUT PAGE ABOUT PART END
+* * * * * * * * * * */
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+        SCREEN 1201PX TO 1400PX END
+- - - - - - - - - -  - - - - - - - - - - */
