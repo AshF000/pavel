@@ -150,8 +150,15 @@ a:hover {
   line-height: 1.5;
 }
 
-#intro p span a {
+#intro p span a{
   color: var(--sec-clr);
+  transition: all linear ease-in-out;
+  transition-duration: .2s;
+}
+
+#intro p span a:hover{
+  font-weight: 400 !important;
+  text-shadow: -0.50px 0 currentcolor, 0.50px 0 currentcolor;
 }
 
 /* * * * * * * * * * *
